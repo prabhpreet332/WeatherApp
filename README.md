@@ -14,8 +14,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ----------
 
 ## Screenshots
-<img src="https://github.com/prabhpreet332/WeatherApp/blob/master/public/ss2.png">
 <img src="https://github.com/prabhpreet332/WeatherApp/blob/master/public/ss1.png">
+<img src="https://github.com/prabhpreet332/WeatherApp/blob/master/public/ss2.png">
 
 --------
 
