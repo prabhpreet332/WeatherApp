@@ -2,6 +2,22 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+----------
+
+## To Run this project:
+1. npm install 
+2. npm start
+3. In browser, visit [http://localhost:3000](http://localhost:3000)
+4. Allow the "Location Services" (otherwise it will not work)
+5. Since the geolocation services may not be accurate, **reload** it once or twice to get the weather at your location.
+
+----------
+
+## Screenshots
+<img src="public/Screenshot from 2021-12-29 23-04-09.png">
+<img src="public/Screenshot from 2021-12-29 23-01-43.png">
+--------
+
 ## Available Scripts
 
 In the project directory, you can run:
