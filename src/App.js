@@ -1,7 +1,8 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import axios from "axios";
 import "./App.css";
-const API_KEY = "60d505bb48f9c02e8d1f29a621cd125f"
+
+const API_KEY = "4062565f5ccfb98032d874bddc0c6960"
 
 function App() {
   const [lat, setLat] = useState(0);
@@ -24,11 +25,7 @@ function App() {
   useEffect(() => {
 
     let getData = async () => {
-      try {
-        
-        await window.navigator.geolocation.getCurrentPosition(
-          getLatLon
-        );
+        await window.navigator.geolocation.getCurrentPosition(getLatLon);
 
         const res = await axios.get(
           `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
@@ -38,7 +35,7 @@ function App() {
         let sunsetTime = new Date(res.data.sys.sunset * 1000);
         let currTime = new Date();
         let icon_src = "http://openweathermap.org/img/w/" + res.data.weather[0].icon + ".png";
-        
+
         setTemp(res.data.main.temp);
         setMinTemp(res.data.main.temp_min);
         setMaxTemp(res.data.main.temp_max);
@@ -48,10 +45,6 @@ function App() {
         setSunriseTime(sunriseTime.toLocaleTimeString());
         setSunsetTime(sunsetTime.toLocaleTimeString());
         setCurrTime(currTime.toLocaleTimeString());
-
-      } catch (err) {
-        console.error(err);
-      }
     };
 
     getData();
